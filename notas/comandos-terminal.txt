@@ -1,0 +1,6 @@
+node file.js → ejecuta un archivo con Node.js
+let → variable que puede cambiar
+const → variable constante
+if / else → condicionales
+for / while → bucles
+() => {} → funciones flecha
