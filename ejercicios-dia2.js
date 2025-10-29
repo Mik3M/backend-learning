@@ -41,8 +41,33 @@ if (Object.keys(valor).length ===0) {
     console.log("tiene elementos");
 }
 4**
-
-*/
 for (let i=1; i<=10; i++){
-    console.log(`Vuelve número ${i}`);
+    if( i % 2 === 0){
+        console.log(`Vuelve número ${i}`);
+    }
 }
+5**
+let x=5;
+while (x>0){
+    console.log(`x vale: ${x}`);
+    x--;
+}
+6**
+const suma = (a, b) => a+b;
+console.log (suma (4,6));
+7**
+
+const edad =25;
+if (edad>=18){
+    console.log("Eres mayor de edad");
+} else {
+    console.log("Eres menor de edad");
+} 
+*/
+function esMayorDeEdad(edad) {
+  return edad >= 18;
+}
+
+console.log(esMayorDeEdad(25));
+
+
