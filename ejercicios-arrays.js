@@ -26,7 +26,7 @@ const usuario = { nombre: "Carlos", edad: 30 };
 const { nombre, edad } = usuario;
 console.log(nombre); // Carlos
 console.log(edad);   // 30
-*/
+
 
 const users = [
   { name: "Dani", age: 25, ciudad: "Bogota" },
@@ -40,3 +40,27 @@ console.log(nombres);
 
 const promedioEdad = users.reduce((acumulador, persona) => acumulador + persona.age, 0) / users.length;
 console.log(promedioEdad);
+*/
+const pedirUsuario = (id) => {
+  console.log("Conectando con el servidor...");
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (id === 1) {
+        resolve({ id: 1, nombre: "Laura", ciudad: "Bogotá" });
+      } else {
+        reject("❌ Usuario no encontrado");
+      }
+    }, 2000);
+  });
+};
+
+const main = async () => {
+  try {
+    const usuario = await pedirUsuario(1);
+    console.log("✅ Datos recibidos:", usuario);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+main();
